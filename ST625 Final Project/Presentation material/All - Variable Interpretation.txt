@@ -1,0 +1,203 @@
+Format: I will put my interpretation directly under each variable. Please understand that only the expected output from R
+came from R.
+
+Data = All
+Formula = Age ~ .
+Notes: No variables deleted
+
+Coefficients:
+                                            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                               24.5442372  2.8097774   8.735  < 2e-16 ***
+	- The starting point for the estimate starts at 24.5 years of age, which is pretty high given the distribution of age capped at 30 and the straight average = 20.4337 (mean(all$Age, na.rm = TRUE)
+	&&& All variables that are not significant (no markers) will have a similar interpretation. Maybe these don't need to be interpreted.
+	
+Music                                     -0.0727630  0.1499733  -0.485 0.627761    
+	- Variable insignificant. A higher score for Music decreases age. The range is 0.291052 ((5-1)*Beta Coefficient).
+`Slow songs or fast songs`                 0.0054296  0.1084772   0.050 0.960099    
+Dance                                      0.1490838  0.0922971   1.615 0.106869    
+Folk                                       0.0367909  0.0913674   0.403 0.687359    
+Country                                    0.1241276  0.0916815   1.354 0.176364    
+`Classical music`                         -0.1651987  0.0973071  -1.698 0.090170 .
+	- Variable significant at a = 0.1. Seems counter-intuitive as classical music is probably more suited for older people.	
+Musical                                   -0.0298137  0.0854626  -0.349 0.727344    
+Pop                                        0.1085872  0.0900861   1.205 0.228615    
+Rock                                       0.0435033  0.1020136   0.426 0.669961    
+`Metal or Hardrock`                       -0.0017765  0.0836076  -0.021 0.983056    
+Punk                                      -0.0754465  0.0863788  -0.873 0.382834    
+`Hiphop, Rap`                             -0.1657418  0.0780181  -2.124 0.034114 *  
+	- Variable significant at a = 0.05. Seems intuitive as hip-hop would be enjoyed by younger people.
+`Reggae, Ska`                              0.0914505  0.0822311   1.112 0.266610    
+`Swing, Jazz`                             -0.1071123  0.0865707  -1.237 0.216549    
+`Rock n roll`                              0.0034150  0.0932463   0.037 0.970799    
+Alternative                               -0.0491828  0.0782575  -0.628 0.529973    
+Latino                                     0.0749343  0.0822719   0.911 0.362822    
+`Techno, Trance`                           0.0410404  0.0729185   0.563 0.573799    
+Opera                                      0.1975437  0.0958727   2.060 0.039856 *  
+	- Variable significant at a = 0.05. Seems intuitive as Opera is seen as a more cultural and traditional art.
+Movies                                    -0.2348038  0.1484359  -1.582 0.114299    
+Horror                                    -0.0259687  0.0748948  -0.347 0.728933    
+Thriller                                   0.2033739  0.0897419   2.266 0.023854 *  
+	- Variable significant at a = 0.05. Not sure how to interpret this one, but may be a hidden nugget of information.
+Comedy                                    -0.1388447  0.1310842  -1.059 0.290006    
+Romantic                                   0.1240409  0.0910523   1.362 0.173700    
+`Sci-fi`                                  -0.1814801  0.0782715  -2.319 0.020809 *  
+	- Variable significant at a = 0.05. Sci-fi and nerd culture has become mainstream recently, so it does make a little sense.
+War                                       -0.0522265  0.0752950  -0.694 0.488231    
+`Fantasy/Fairy tales`                      0.1445168  0.1092042   1.323 0.186304    
+Animated                                  -0.1594294  0.1010608  -1.578 0.115283    
+Documentary                               -0.0157707  0.0912231  -0.173 0.862814    
+Western                                   -0.0384572  0.0923736  -0.416 0.677348    
+Action                                     0.0157612  0.0849752   0.185 0.852926    
+History                                    0.0932013  0.0846044   1.102 0.271147    
+Psychology                                -0.0715557  0.0774391  -0.924 0.355908    
+Politics                                  -0.0406107  0.0885344  -0.459 0.646644    
+Mathematics                               -0.1232850  0.0835595  -1.475 0.140714    
+Physics                                    0.1060657  0.1004783   1.056 0.291644    
+Internet                                   0.0285905  0.1133676   0.252 0.800993    
+PC                                         0.1774159  0.0901846   1.967 0.049693 *  
+	- Variable significant at a = 0.05. People who are very interested in PC hardware tend to be from an older generation as new technolgies are mostly software orientated.
+`Economy Management`                       0.0509311  0.0725076   0.702 0.482733    
+Biology                                   -0.1397529  0.1057010  -1.322 0.186707    
+Chemistry                                 -0.2126898  0.0884441  -2.405 0.016535 *  
+	- Variable significant at a = 0.05. People may be more interested in Chemistry due to curiosity of newly legalized substances.
+Reading                                    0.0176328  0.0747913   0.236 0.813713    
+Geography                                  0.0558187  0.0732094   0.762 0.446140    
+`Foreign languages`                       -0.0608644  0.0874928  -0.696 0.486963    
+Medicine                                   0.2702813  0.0937396   2.883 0.004100 ** 
+	- Variable significant at a = 0.01. I'm not able to explain why this is positive while Chemistry is negative, they are related in my opinion.
+Law                                        0.0957955  0.0831299   1.152 0.249710    
+Cars                                      -0.0973715  0.0776619  -1.254 0.210490    
+`Art exhibitions`                          0.1857000  0.0927406   2.002 0.045772 *  
+	- Variable significant at a = 0.05. In recent years (post-2016), there has been decline in liberal arts majors.
+Religion                                  -0.0018986  0.0812367  -0.023 0.981363    
+`Countryside, outdoors`                    0.0933942  0.0787430   1.186 0.236146    
+Dancing                                    0.0436554  0.0762310   0.573 0.567117    
+`Musical instruments`                      0.0271320  0.0662443   0.410 0.682289    
+Writing                                   -0.0219558  0.0789130  -0.278 0.780950    
+`Passive sport`                            0.0402046  0.0624736   0.644 0.520158    
+`Active sport`                            -0.0305115  0.0677042  -0.451 0.652426    
+Gardening                                  0.0827404  0.0829298   0.998 0.318887    
+Celebrities                                0.0493842  0.0830303   0.595 0.552257    
+Shopping                                  -0.1607993  0.1050071  -1.531 0.126307    
+`Science and technology`                   0.0990531  0.0894378   1.108 0.268593    
+Theatre                                   -0.1286752  0.0892588  -1.442 0.150026    
+`Fun with friends`                        -0.0948968  0.1378033  -0.689 0.491361    
+`Adrenaline sports`                        0.0033570  0.0751672   0.045 0.964395    
+Pets                                      -0.0819654  0.0594771  -1.378 0.168773    
+Flying                                    -0.0076253  0.0786195  -0.097 0.922772    
+Storm                                      0.0998468  0.0923749   1.081 0.280256    
+Darkness                                   0.0041390  0.0856513   0.048 0.961477    
+Heights                                   -0.0073747  0.0708766  -0.104 0.917170    
+Spiders                                    0.0112057  0.0667677   0.168 0.866782    
+Snakes                                     0.0311671  0.0748027   0.417 0.677104    
+Rats                                      -0.0756917  0.0804045  -0.941 0.346950    
+Ageing                                     0.0657632  0.0683400   0.962 0.336355    
+`Dangerous dogs`                          -0.0444272  0.0751987  -0.591 0.554916    
+`Fear of public speaking`                 -0.0495057  0.0878760  -0.563 0.573437    
+Smokingformer smoker                       0.2720989  0.2793840   0.974 0.330553    
+Smokingnever smoked                       -0.2413789  0.3075029  -0.785 0.432837    
+Smokingtried smoking                      -0.0870884  0.2504431  -0.348 0.728180    
+Alcoholnever                              -0.2252885  0.3505817  -0.643 0.520762    
+Alcoholsocial drinker                     -0.0953514  0.2261377  -0.422 0.673456    
+`Healthy eating`                          -0.0177712  0.1019298  -0.174 0.861661    
+`Daily events`                             0.1360503  0.0881806   1.543 0.123482    
+`Prioritising workload`                    0.0179021  0.0869087   0.206 0.836883    
+`Writing notes`                            0.0837464  0.0690754   1.212 0.225921    
+Workaholism                               -0.0465128  0.0822035  -0.566 0.571760    
+`Thinking ahead`                           0.0810356  0.0843294   0.961 0.337034    
+`Final judgement`                         -0.0146484  0.0738055  -0.198 0.842753    
+Reliability                                0.2228370  0.1029545   2.164 0.030893 *  
+	- Variable significant at a = 0.05. Older people tend to more capable of doing their jobs, especially if they have had their position for longer.
+`Keeping promises`                        -0.0491173  0.1079518  -0.455 0.649307    
+`Loss of interest`                         0.0774907  0.0677593   1.144 0.253316    
+`Friends versus money`                     0.0043572  0.0835224   0.052 0.958415    
+Funniness                                  0.0660703  0.0826632   0.799 0.424504    
+Fake                                      -0.0855544  0.0934723  -0.915 0.360469    
+`Criminal damage`                          0.0419595  0.0621159   0.676 0.499660    
+`Decision making`                          0.0457698  0.0806306   0.568 0.570522    
+Elections                                  0.1905657  0.0576010   3.308 0.001004 ** 
+	 - Variable significant at a = 0.01. It is widely known that older people place more emphasis in voting.
+`Self-criticism`                          -0.1225976  0.0787600  -1.557 0.120183    
+`Judgment calls`                          -0.1545751  0.0971150  -1.592 0.112075    
+Hypochondria                              -0.0745037  0.0833336  -0.894 0.371719    
+Empathy                                   -0.0730363  0.0881803  -0.828 0.407908    
+`Eating to survive`                       -0.0722044  0.0728058  -0.992 0.321792    
+Giving                                     0.0518676  0.0729001   0.711 0.477105    
+`Compassion to animals`                    0.2398800  0.0832590   2.881 0.004128 ** 
+	- Variable significant at a = 0.01. Not sure why this is significant, as I think people uniformly have the opinion that harming animals is bad.
+`Borrowed stuff`                           0.0073226  0.0899175   0.081 0.935126    
+Loneliness                                 0.0655325  0.0922744   0.710 0.477908    
+`Cheating in school`                      -0.0372811  0.0764928  -0.487 0.626197    
+Health                                     0.1950366  0.0950649   2.052 0.040714 *  
+	- Variable significant at a = 0.05. I agree that older people place more emphasis on their health as they no longer expect their body to overcome injury easily.
+`Changing the past`                       -0.1633416  0.0755592  -2.162 0.031098 *  
+	- Variable significant at a = 0.05. I think older people have more opportunities to have regrets, coupled with the probability they feel they have less time to rectify their wrongs.
+God                                       -0.0549350  0.0767208  -0.716 0.474294    
+Dreams                                    -0.2309851  0.1309772  -1.764 0.078403 . 
+	- Variable significant at a = 0.1. I would agree with the negative slope as older people tend to have more tainted views on life, which can affect their overall thoughts.
+Charity                                   -0.0644014  0.0960567  -0.670 0.502871    
+`Number of friends`                       -0.0439945  0.1015814  -0.433 0.665127    
+Punctualityi am often early                0.1354992  0.2038073   0.665 0.506452    
+Punctualityi am often running late         0.2414774  0.2093718   1.153 0.249307    
+Lyingnever                                 0.4166023  0.4553939   0.915 0.360717    
+Lyingonly to avoid hurting someone        -0.1247651  0.3029886  -0.412 0.680672    
+Lyingsometimes                            -0.0786011  0.2818504  -0.279 0.780453    
+Waiting                                    0.0819354  0.0902907   0.907 0.364589    
+`New environment`                         -0.0243789  0.0846492  -0.288 0.773464    
+`Mood swings`                             -0.1518883  0.0961878  -1.579 0.114934    
+`Appearence and gestures`                 -0.3528406  0.1045951  -3.373 0.000799 ***
+	- Variable significant at a = 0.001. This may be due to people 'giving up' as they get married, which is more likely as their age rises.
+Socializing                                0.0003658  0.0903185   0.004 0.996770    
+Achievements                              -0.0646353  0.0946196  -0.683 0.494848    
+`Responding to a serious letter`          -0.0474775  0.0753378  -0.630 0.528848    
+Children                                  -0.0169320  0.0844479  -0.201 0.841167    
+Assertiveness                              0.1341057  0.0801638   1.673 0.094957 .  
+	- Variable significant at a = 0.1. I think this makes sense as people tend to trust their experiences as they grow older as they have more evidence to prove the way they think.
+`Getting angry`                            0.0542568  0.0866475   0.626 0.531476    
+`Knowing the right people`                -0.1159957  0.0889685  -1.304 0.192892    
+`Public speaking`                          0.0063810  0.0816086   0.078 0.937707    
+Unpopularity                               0.0336518  0.0778183   0.432 0.665603    
+`Life struggles`                           0.1097286  0.0816756   1.343 0.179715    
+`Happiness in life`                       -0.0462644  0.1303129  -0.355 0.722717    
+`Energy levels`                           -0.0004895  0.1113581  -0.004 0.996495    
+`Small - big dogs`                         0.0048236  0.0824399   0.059 0.953365    
+Personality                                0.2207333  0.1501566   1.470 0.142169    
+`Finding lost valuables`                  -0.0274031  0.0768741  -0.356 0.721637    
+`Getting up`                              -0.0266485  0.0711815  -0.374 0.708281    
+`Interests or hobbies`                    -0.0390384  0.0876904  -0.445 0.656374    
+`Parents' advice`                         -0.1423556  0.1088651  -1.308 0.191584    
+`Questionnaires or polls`                 -0.2476258  0.0845091  -2.930 0.003539 ** 
+	- Variable significant at a = 0.01. Personally, I was much more interested in taking quiz and surveys as I wanted to know more about myself and care about the opinions of others.
+`Internet usage`less than an hour a day   -0.2010140  0.2548763  -0.789 0.430668    
+`Internet usage`most of the day            0.7130390  0.2685082   2.656 0.008164 ** 
+	- Variable significant at a = 0.01. This may make sense as younger individuals may be under limitations instituted by their parents. Also, work is mostly done online now, so working individuals probably spend more time online.
+Finances                                   0.0568739  0.0818124   0.695 0.487261    
+`Shopping centres`                         0.0578793  0.0903767   0.640 0.522184    
+`Branded clothing`                        -0.0120319  0.0766788  -0.157 0.875375    
+`Entertainment spending`                  -0.0135138  0.0897877  -0.151 0.880423    
+`Spending on looks`                        0.0425836  0.1001431   0.425 0.670849    
+`Spending on gadgets`                     -0.1069235  0.0800657  -1.335 0.182322    
+`Spending on healthy eating`              -0.0498970  0.0882490  -0.565 0.572041    
+Height                                    -0.0227106  0.0145539  -1.560 0.119270    
+Weight                                     0.0341920  0.0095603   3.576 0.000381 ***
+	- Variable significant at a = 0.001. Older people tend to be heavier. Obvious.
+`Number of siblings`                       0.0135404  0.0933414   0.145 0.884718    
+Gendermale                                 0.4601418  0.3451558   1.333 0.183077    
+`Left - right handed`right handed         -0.0867457  0.2841478  -0.305 0.760274    
+Educationcurrently a primary school pupil -4.7651693  1.5942640  -2.989 0.002934 ** 
+Educationdoctorate degree                  2.8111299  1.3428501   2.093 0.036803 *  
+Educationmasters degree                    3.6893230  0.3478903  10.605  < 2e-16 ***
+Educationprimary school                   -2.6330909  0.3649203  -7.216 1.94e-12 ***
+Educationsecondary school                 -1.0123455  0.2098659  -4.824 1.86e-06 ***
+	As a group, The kind of education someone has accomplished is a function of time, so it makes obvious sense that these would be significant.
+
+`Only child`yes                           -0.2474513  0.2145420  -1.153 0.249286    
+`Village - town`village                    0.1678415  0.2354136   0.713 0.476192    
+`House - block of flats`house/bungalow    -0.2768813  0.2085654  -1.328 0.184917    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.859 on 513 degrees of freedom
+  (336 observations deleted due to missingness)
+Multiple R-squared:  0.6472,	Adjusted R-squared:  0.5371 
+F-statistic: 5.881 on 160 and 513 DF,  p-value: < 2.2e-16
